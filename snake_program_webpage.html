@@ -1,0 +1,183 @@
+ <html style = "background-color:lightslategray; ">
+    <head>
+        <title>Welcome to maze game!</title>
+        <style>
+            @keyframes frame{
+                from{background-color:aqua;}
+                to{background-color:blue;}
+            }
+
+            .grid-container{
+                display: grid;
+                grid-template-columns: 400px;
+
+            }
+            .grid-item{
+                background-color:rgb(49, 146, 232);
+                font-size: 25px;
+                width: 100%;
+                text-align: center;
+                text-shadow: 10px;
+                
+            }
+
+            .column{
+                float: left;
+            }
+            .left{
+                width: 25%;
+                border-width: 20px;
+                border-color: aquamarine;
+                border-radius: 10px;
+               /* animation-name: frame;*/
+                
+                transition: transform 300ms;
+            
+            }
+            .left:hover{
+                transform: translateY(-4px);
+            }
+            span{
+                display: block;
+                height: 37px;
+                width: 37px;
+                line-height: 30spx; 
+
+                -moz-border-radius: 30px;
+                border-radius: 30px;
+
+                background-color: black;
+                color: rgb(164,51,201);
+                text-align:center;
+
+
+            }
+            
+            .middle{
+                width: 50%;
+                border-width: 100px;
+                border-color: aquamarine;
+                border-radius: 10px;
+                transition: transform 300ms;
+            }
+
+            .middle:hover{
+                transform: translateY(-4px);
+            }
+            .right{
+                width: 25%;
+                border-width: 1px;
+                border-color: aquamarine;
+                border-radius: 10px;
+                transition: transform 300ms;
+               
+            }
+            .right:hover{
+                transform: translateY(-4px);
+            }
+
+            .row:after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+      
+        <body>
+            <div class = "row">
+                <div class = "column left" style="background-color: rgb(16, 144, 144);width: 25%;border-width: 10px; border-color:bisque; border-radius: 20px;" >
+                    <h1 style = "color:rgb(164, 51, 201);border-style: solid; border-radius: 15px; border-color: rgb(16, 144, 144);"><a href = "index.html"><span>FG</span></a></h1>
+                </div>    
+                
+                <div class = "column middle" style = "background-color:rgb(16, 144, 144)" >
+                    <h1 style = "color: rgb(164,51,201); border-style: solid; border-radius: 15px; border-color: rgb(16, 144, 144); "><center>Welcome to maze game!!</center></h1>
+                </div>  
+               
+                <div class = "column right" style = "background-color: rgb(16, 144, 144);">
+                    <h1 style = "color:rgb(164, 51, 201);border-style: solid; border-radius: 15px; border-color: rgb(16, 144, 144);">
+                    <a href="https://github.com/davidSpiegel1">github account!</a></h1>
+                </div>
+               
+            </div>
+        </body> 
+        </head>
+        
+    
+
+
+    
+       
+        
+    
+        </p1>
+        <p1 style = "color: rgb(164,51,201);">Within the game we will click around to see if we 
+            can move the snake!
+        </p1>
+    <hr/>
+  
+    <body>
+        <style>
+            .w3-panel{
+                color: bisque;
+                background-color: aqua;
+                
+                width: 1000px;
+                height:400px;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto;
+                border: 1px solid rgb(16, 144, 144);
+                padding: 10px;
+                width: 1000px;
+                height: 400px;
+            }
+            .grid-item{
+                background-color:rgb(49, 146, 232);
+                font-size: 20px;
+                
+                text-align: center;
+                text-shadow: 10px;
+                
+            }
+
+           
+            
+        </style>
+        <div class = "w3-panel">
+            <div class = "grid-container">
+                <div class ="grid-item"><p id = "game1"> </p></div>
+                <div class ="grid-item"><p id = "game2"> </p></div>
+                <div class ="grid-item"><p id = "game3"> </p></div>
+                <div class ="grid-item"><p id = "game4"> </p></div> 
+                <div class ="grid-item"><p id = "game5"> </p></div> 
+                <div class ="grid-item"><p id = "game6"> </p></div>
+                <div class ="grid-item"><p id = "game7"> </p></div>
+                <div class ="grid-item"><p id = "game8"> </p></div>
+                <div class ="grid-item"><p id = "game9"> </p></div> 
+                <div class ="grid-item"><p id = "game10"> </p></div>
+                <div class ="grid-item"><p id = "game11"> </p></div>
+                <div class ="grid-item"><p id = "game12"> </p></div>
+                <div class ="grid-item"><p id = "game13"> </p></div>
+                <div class ="grid-item"><p id = "game14"> </p></div> 
+                <div class ="grid-item"><p id = "game15"> </p></div> 
+                <div class ="grid-item"><p id = "game16"> </p></div> 
+                <div class ="grid-item"><p id = "game17"> </p></div>  
+                <div class ="grid-item"><p id = "game18"> </p></div> 
+                <div class ="grid-item"><p id = "game19"> </p></div>   
+                <div class ="grid-item"><p id = "game20"> </p></div> 
+                <div class ="grid-item"><p id = "game21"> </p></div>
+                <div class ="grid-item"><p id = "game22"> </p></div>  
+                <div class ="grid-item"><p id = "game23"> </p></div> 
+                <div class ="grid-item"><p id = "game24"> </p></div>      
+            </div>
+
+            <script src="snakeGame.js"></script>
+        </h3>
+        </div>
+        <input type = "text" name = "name" id = "name" oninput ="playGame();">
+       
+
+    </body>
+
+    </html>
