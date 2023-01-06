@@ -137,8 +137,9 @@ function getTribesAsHTML($arr){
 function getMainResultAsHTML($arr,$arr1){
     $result = '';
     $result .= '<div class = "main_container">';
-    
+    $rating = '';
     foreach ($arr1 as $tribe){
+        $rating .= $tribe['rating'];
         $result .= '<p><b>Current Tribe - ' . $tribe['name'].'</b></p>';
         $result .= '<form action="controller.php" method="post">';
         $result .= '<button class = "game_main_container"><b>' . $tribe['name'].'</b><br>'.$tribe['description'] . '</button>';
@@ -152,18 +153,29 @@ function getMainResultAsHTML($arr,$arr1){
     foreach($arr as $stream){
         $count++;
     }
-    $result .= $count . ' Comments';
+    $result .= '<div class = "row">';
+    $result .= '<div class = "col-md-4">';
+    $result .= 'Hi';
     
-    $result .= "<form action = 'controller.php' method = 'post' >";
+    $result .= '</div><div class = "col-md-4">HII';
+   
+    $result .= '</div>';
+    $result .= '<div class = "col-md-4">';
+    $result .= ' <form action = "controller.php" class = "ratingBox" method="post"><button class = "buttonComment"><span class = "material-symbols-outlined">thumb_up</span></button>'.$rating.'<button class = "buttonComment"><span class="material-symbols-outlined">thumb_down</span></button></form>';
+    $result .= '</div></div><br><br>';
+    $result .= '  '.$count . ' Comment(s) <br><br> ';
     if (isset($_SESSION['user'])){
-        // $result = '<div class = "userIcon2">';
-         $result .= '<span class = "newSpan2"><b>'.htmlspecialchars($_SESSION['user']).'</b></span>';
-        // $result .= '</div>';
-     }
-    $result .= "<textarea class ='commentClass' name = 'stream' rows='1' cols='30' placeholder='Add a stream...'></textarea><br>";
+
+    $result .= '<div class = "containerStream">';
+    $result .= '<div class = "userCircle"><i><span class = "newSpan2">'.htmlspecialchars($_SESSION['user']).'</span></i></div>';
+    $result .= "<form action = 'controller.php' method = 'post' >";   
+    $result .= "<textarea class ='commentClassTwo' name = 'stream' rows='1' cols='30' placeholder='Add a stream...'></textarea>";
     $result .= "<button name='addStream' class='buttonComment'>Add stream</button>";
     $result .= "<input type='hidden' name='streamUser' value='" . $_SESSION['curName'] . "'>";
     $result .= "</form>";
+    $result .= '</div>';
+    }
+
     foreach($arr as $stream){
 
         $result .= '<div class = "containerStream">';

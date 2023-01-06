@@ -9,7 +9,7 @@ class DatabaseAdaptor
     // The construct will connect to the needed database triabl
     public function __construct()
     {
-        $dataBase = 'mysql:dbname=tribal;charset=utf8;host=127.0.0.1';
+        $dataBase = 'mysql:dbname=tribal2;charset=utf8;host=127.0.0.1';
         $user = 'root';
         $password = ''; // Empty string with XAMPP install
         try {
@@ -24,17 +24,17 @@ class DatabaseAdaptor
     // This function exists only for testing purposes. Do not call it any other time.
     public function startFromScratch()
     {
-        $stmt = $this->DB->prepare("DROP DATABASE IF EXISTS tribal;");
+        $stmt = $this->DB->prepare("DROP DATABASE IF EXISTS tribal2;");
         $stmt->execute();
 
         // This will fail unless you created database quotes inside MariaDB.
-        $stmt = $this->DB->prepare("create database tribal;");
+        $stmt = $this->DB->prepare("create database tribal2;");
         $stmt->execute();
 
-        $stmt = $this->DB->prepare("use tribal;");
+        $stmt = $this->DB->prepare("use tribal2;");
         $stmt->execute();
 
-        $update = " CREATE TABLE tribe ( " . " id int(20) NOT NULL AUTO_INCREMENT, name varchar(2000), description varchar(2000), rating int(11), PRIMARY KEY (id));";
+        $update = " CREATE TABLE tribes ( " . " id int(20) NOT NULL AUTO_INCREMENT, name varchar(2000), description varchar(2000), rating int(11), PRIMARY KEY (id));";
         $stmt = $this->DB->prepare($update);
         $stmt->execute();
 
@@ -65,7 +65,7 @@ class DatabaseAdaptor
         // Just sent the array
         $val = $this->DB->prepare("SELECT * FROM users;");
         $val->execute();
-        return htmlspecialchars($val->fetchAll(PDO::FETCH_ASSOC));
+        return $val->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getTribeStreamWhen($name){
@@ -186,6 +186,8 @@ class DatabaseAdaptor
             return TRUE;
         }
     }
+    
+
 }
 
 ?>

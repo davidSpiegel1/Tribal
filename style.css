@@ -25,8 +25,9 @@ a:link{
 .main_container{
     /*background-color: rgb(207, 102, 202);*/
     
-    background-color: rgb(86, 162, 184);
-    border-color: blue;
+    background-color: rgb(104, 201, 228);
+    
+    
     text-align: center;
     padding-bottom: 10px;
     width: 100%;
@@ -98,22 +99,35 @@ a:link{
     background-color:rgb(16, 144, 144);
     transform: translateY(-4px);
 }
-
 .commentClass{
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     outline: none;
     border: none;
-    background-color: aquamarine;
+    background-color:aquamarine;
+    color: white;
+    
+}
+.commentClassTwo{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background-color:rgb(24, 144, 144);
+    color: white;
     
 }
 
 .game_main_container{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     text-decoration: none;
     background-color: aqua;
     border-radius: 10px;
-    border-color: blue;
+    border-color: aquamarine;
     width: 90%;
     height: 200px;
     text-align: center;
@@ -121,11 +135,20 @@ a:link{
     
 
 }
-.game_main_container:hover{
 
+.ratingBox{
+    background-color: rgb(90, 164, 140);
+    border-radius: 30px;
+    width:fit-content;
+   /* display: inline;*/
+}
+.game_main_container:hover{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     background-color: aqua;
     border-radius: 10px;
-    border-color: blue;
+    border-color:rgb(10, 179, 182);
     width: 90%;
     height: 200px;
     text-align: center;
@@ -139,7 +162,9 @@ a:link{
     border: none;
     background-color: rgb(90, 164, 140);
     border-radius: 10px;
-
+}
+.buttonComment:hover{
+    background-color: rgb(71, 141, 119);
 }
 .coolRed{
 	vertical-align: text-bottom;
@@ -219,12 +244,7 @@ a:link{
     text-decoration: none;
     margin-left: 0px;
     white-space:nowrap;
-    
-
 }
-
-
-
 .newSpan{
     display: block;
     height: 37px;
@@ -248,14 +268,16 @@ a:link{
     -moz-border-radius: 30px 30px 0px 0px;
     border-radius: 30px;
     background:rgb(155, 0, 80);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(224, 179, 239);
     text-decoration: none;
     text-align: center;
+   
+ 
 }
 
 .main1{
     flex-grow: 0;
-    
     padding: 0px;
     overflow-y: auto;
     z-index: 10px;
